@@ -7,19 +7,61 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+ //Array of dictionary
+ var arrRes = [[String:AnyObject]]()
+    
+    @IBOutlet weak var tableViewJSON: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        makeRequest()
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
-
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return arrRes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "jsonCell")!
+            var dict = arrRes[indexPath.row]
+            cell.textLabel?.text = dict["source"]?["name"] as? String
+            cell.detailTextLabel?.text = dict["title"] as? String
+            return cell
+        }
+    
+    func makeRequest(){
+        
+        //Make a request with Alamofire
+        
+        Alamofire.request("https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=c694e9ad21c744f08cc48c8f06300a57").responseJSON { (responseData) -> Void in
+            if((responseData.result.value) != nil) {
+                //Deal data with SwiftyJson :)
+                let swiftyJsonVar = JSON(responseData.result.value!)
+                //Print to see the value of response
+                print(swiftyJsonVar)
+                if let resData = swiftyJsonVar["articles"].arrayObject {
+                    self.arrRes = resData as! [[String:AnyObject]]
+                }
+                if self.arrRes.count > 0 {
+                    self.tableViewJSON.reloadData()
+                }
+            }
+        }
+        
+    }
+        
 }
+
+
+
 
