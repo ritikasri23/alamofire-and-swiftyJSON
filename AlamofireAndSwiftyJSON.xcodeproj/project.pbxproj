@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A2221B92A1AE36294BD2810C /* Pods_AlamofireAndSwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3828633C9C8CF1ECE46D4D61 /* Pods_AlamofireAndSwiftyJSON.framework */; };
-		F845A5B62020AC5200DCE1E1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F845A5B52020AC5200DCE1E1 /* TableViewCell.swift */; };
 		F88524B6201E7BEA00AC0044 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88524B5201E7BEA00AC0044 /* AppDelegate.swift */; };
 		F88524B8201E7BEA00AC0044 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88524B7201E7BEA00AC0044 /* ViewController.swift */; };
 		F88524BB201E7BEA00AC0044 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F88524B9201E7BEA00AC0044 /* Main.storyboard */; };
@@ -33,7 +32,6 @@
 		3828633C9C8CF1ECE46D4D61 /* Pods_AlamofireAndSwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlamofireAndSwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A160258AE8D6DC195046E3A1 /* Pods-AlamofireAndSwiftyJSON.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireAndSwiftyJSON.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireAndSwiftyJSON/Pods-AlamofireAndSwiftyJSON.debug.xcconfig"; sourceTree = "<group>"; };
 		C6810384DF909354C658046B /* Pods-AlamofireAndSwiftyJSON.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlamofireAndSwiftyJSON.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlamofireAndSwiftyJSON/Pods-AlamofireAndSwiftyJSON.release.xcconfig"; sourceTree = "<group>"; };
-		F845A5B52020AC5200DCE1E1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F88524B2201E7BEA00AC0044 /* AlamofireAndSwiftyJSON.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlamofireAndSwiftyJSON.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F88524B5201E7BEA00AC0044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F88524B7201E7BEA00AC0044 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 				F88524B5201E7BEA00AC0044 /* AppDelegate.swift */,
 				F88524B7201E7BEA00AC0044 /* ViewController.swift */,
 				F88524B9201E7BEA00AC0044 /* Main.storyboard */,
-				F845A5B52020AC5200DCE1E1 /* TableViewCell.swift */,
 				F88524BF201E7BEA00AC0044 /* Assets.xcassets */,
 				F88524C1201E7BEA00AC0044 /* LaunchScreen.storyboard */,
 				F88524C4201E7BEA00AC0044 /* Info.plist */,
@@ -291,7 +288,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F88524BE201E7BEA00AC0044 /* AlamofireAndSwiftyJSON.xcdatamodeld in Sources */,
-				F845A5B62020AC5200DCE1E1 /* TableViewCell.swift in Sources */,
 				F88524B8201E7BEA00AC0044 /* ViewController.swift in Sources */,
 				F88524B6201E7BEA00AC0044 /* AppDelegate.swift in Sources */,
 			);
